@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>simpleInterestCalulator</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="range"  id="rate" min="1" max="20" value="10.25">  <br/>
-        <span id="rate_val">10.25%</span>
-        No. of Years <select id="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option> 
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option></select><br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute Interest/button>
-            <span id="result"></span>
-        </div>
- <footer>
-
-        &#169; This Calculator belongs to Kartik Nitin More
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
 
 
-</footer>
-    </body>
+</head>
+<body>
+
+
+<h1>Simple Interest Calculator</h1>
+<div>
+ Amount <input type="number"  id="principal"> </div>
+ <br>
+<div class="slidecontainer">
+ Rate <input type="range" min="1" max="100" value="1" class="slider" id="myRange">  <span id="demo"></span>
+  
+</div><br>
+<div>Years <select name="cmbitems" id="cmbitems">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select> <input type="text" name="txtprice" id="txtprice" onClick="checkPrice()"></div>
+<br>
+  <button onclick="calculate()">Calculate</button>
+
+</div>
+
+<p id="result"></p>
+
+
+
+
+<script src="func.js"></script>
+
+</body>
 </html>
