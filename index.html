@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Web App – Simple Interest Calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
 
-
-<h1>Simple Interest Calculator</h1>
-<div>
- Amount <input type="number"  id="principal"> </div>
+<div class="cont">
+<h1 class="heading"><b>Simple Interest Calculator</b></h1>
+<div class="center">
+ <label>Amount</label> <input class="inp1" id="principal" onfocusout="alrt()"> </div>
  <br>
-<div class="slidecontainer">
- Rate <input type="range" min="1" max="100" value="1" class="slider" id="myRange">  <span id="demo"></span>
+<div class="slidecontainer center">
+  <label>Interest Rate</label> <input type="range" min="1" max="20" value="1" class="slider inp2" id="myRange" step="0.5"> <span id="demo"></span>%
   
 </div><br>
-<div>Years <select name="cmbitems" id="cmbitems">
+<div class="center"><label>No. of Years </label>  <select class="inp3" name="cmbitems" id="cmbitems">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
-</select> <input type="text" name="txtprice" id="txtprice" onClick="checkPrice()"></div>
-<br>
-  <button onclick="calculate()">Calculate</button>
-
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select></div>
+<br><div class="center">
+  <button  onclick="calculate()">Compute Interest</button>
 </div>
+<p class="center"id="dep"></p>
+<p class="center"id="rt"></p>
+<p class="center"id="result"></p>
+<p class="center"id="yr"></p>
 
-<p id="result"></p>
-
-
-
+<p class="footer"><h3>&#169; Everyone Can Get Rich</h3></p>
+</div>
 
 <script src="func.js"></script>
 
