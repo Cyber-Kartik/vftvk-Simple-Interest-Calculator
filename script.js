@@ -1,14 +1,24 @@
-function compute()
+function calculate()
 {
-    var principal = document.getElementById("principal").value;
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
-    var interest = principal * years * rate /100;
 
-    var year = new Date().getFullYear()+parseInt(years);   
+var p = document.getElementById ("principal").value;
+var t = document.getElementById ("myRange").value;
+var r = document.getElementById ("txtprice").value;
+var result = document.getElementById("result");
+result.innerHTML = "The interest is " + ((p*t*r)/100 );
+
 }
-function updateRate() 
-{
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
-}           
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+var select = document.getElementById('cmbitems');
+var input = document.getElementById('txtprice');
+select.onchange = function() {
+    input.value = select.value;
+}
